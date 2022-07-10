@@ -1,20 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  return runApp(
-    MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Dice Game',
-      home: Scaffold(
-        backgroundColor: Colors.red,
-        appBar: AppBar(
-          title: const Text('Dicee'),
-          backgroundColor: Colors.red,
-        ),
-        body: const DicePage(),
-      ),
-    ),
-  );
+  return runApp(const DicePage());
 }
 
 class DicePage extends StatelessWidget {
@@ -23,6 +10,16 @@ class DicePage extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Dice_Game',
+      home: Scaffold(
+        backgroundColor: Colors.red,
+        appBar: AppBar(
+          title: const Text('Dicee'),
+          backgroundColor: Colors.red,
+        ),
+      ),
+    );
   }
 }
